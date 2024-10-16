@@ -126,7 +126,7 @@
 			// width: 100%;
 			// flex: 1;
 			 /* 남은 공간을 차지 */
-			// overflow-y: auto;
+			overflow-y: auto;
 			 /* 높이가 넘치면 스크롤 */
 			.inner {
 				min-height: 100%;
@@ -163,6 +163,119 @@
 		sup{
 			font-size: 1.5rem;
 			font-weight: 800;
+		}
+	}
+
+	.management-grid{
+		.mana-item{
+
+		}
+		img{
+			max-width: 500px;
+		}
+		.mana-item{
+			display: flex;
+			flex-wrap: wrap;
+			// justify-content: space-between;
+		}
+		.mana-label{
+			// flex-grow: 1;
+			width: 48%;
+			height: 100px;
+			// margin-bottom: 2%;
+		}
+		.mana-row{
+			background-color: #fff;
+			// background-color: $color-gray-04;
+			*{border: 1px dotted #333;}
+			// .mana-item{
+			// 	display: flex;
+			// 	flex-wrap: wrap;
+			// 	// justify-content: space-between;
+			// }
+			// .mana-label{
+			// 	// flex-grow: 1;
+			// 	width: 48%;
+			// 	height: 100px;
+			// 	margin-bottom: 2%;
+			// }
+			.mana-title{
+				margin-left: 2%;
+			}
+			.mana-text{
+				// width: 100%;
+				width: 70%;
+				ul{
+					// display: flex;
+					// justify-content: space-around;
+					ul{
+						display: block;
+						li{
+							width: 100%;
+						}
+					}
+				}
+				li{
+					// width: calc( 100% / 3 );
+					display: flex;
+					justify-content: flex-start;
+					span{
+						width: 200px;
+						font-size: 24px;
+						font-weight: 700;
+					}
+				}
+			}
+			.mana-image{width: 70%;}
+			.mana-link{
+				width: 100%;
+				width: 70%;
+				dl{
+					min-width: 250px;
+				}
+			}
+		}
+		.mana-col{
+			display: flex;
+			*{border: 1px dotted #d12d2d;}
+			.mana-item{
+				width: 100%;
+				position: relative;
+			}
+			.mana-label{}
+			.mana-title{}
+			.mana-text{
+				width: 100%;
+				display: inline-flex;
+				flex-direction: row-reverse;
+			}
+			.mana-image{
+				position: fixed;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				display: flex;
+				flex-direction: column;
+			}
+			.mana-link{}
+		}
+		.mana-slice-3-alltxt{
+			background-color: #fff;
+			display: flex;
+			flex-direction: column;
+			.mana-item{
+				margin-bottom: 40px;
+			}
+			.mana-group{
+				width: 38%;
+			}
+			.mana-label{
+				font-size: 48px;
+				font-weight: 700;
+			}
+			.mana-link{
+				width: 100%;
+			}
 		}
 	}
 
