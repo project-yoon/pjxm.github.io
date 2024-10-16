@@ -1,0 +1,10 @@
+dist/
+npm-debug.log*
+node_modules/
+.DS_Store
+.cache/
+
+# 임시 파일
+*.tmp
+*~
+**/.DS_Store
