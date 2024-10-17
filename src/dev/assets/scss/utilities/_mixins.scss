@@ -17,7 +17,8 @@ $typography-styles: (
     36: ($text-font-size-36, $text-line-height-of-36),
     40: ($text-font-size-40, $text-line-height-of-40),
 	48: ($text-font-size-48, $text-line-height-of-48),
-	50: ($text-font-size-50, $text-line-height-of-50)
+	50: ($text-font-size-50, $text-line-height-of-50),
+	80: ($text-font-size-80, $text-line-height-of-80)
 );
 // 각 글꼴 크기에 대한 믹스인 자동 생성
 @mixin apply-typography-style($font-size, $line-height) {

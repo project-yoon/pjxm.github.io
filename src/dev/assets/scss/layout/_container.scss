@@ -20,8 +20,9 @@
 			}
 			position: absolute;
 			bottom: -5rem;
-			left: 0;
-			opacity: 1;
+			left: 10px;
+			opacity: 0.6;
+			transition: opacity 1s ease; 
 			// transition: all 0.5s;
 			// transition-delay: 0.5s;
 			// font-size: clamp(1rem, 3vw, 20rem);
@@ -40,10 +41,12 @@
 				}
 			}
 			h3{
+				color: #940707;
 				position: absolute;
 				bottom: 65%;
 				left: 0;
 				opacity: 1;
+				transition: opacity 1s ease; 
 				// transition: all 0.5s;
 				// transition-delay: 0.5s;
 				// font-size: clamp(1rem, 10vw, 20rem);
@@ -126,12 +129,16 @@
 			// width: 100%;
 			// flex: 1;
 			 /* 남은 공간을 차지 */
-			overflow-y: auto;
+			// overflow-y: auto;
 			 /* 높이가 넘치면 스크롤 */
 			.inner {
 				min-height: 100%;
 				/* .inner가 100% 높이를 유지하도록 설정 */
 			}
+		}
+		&[id$="-sub"]{
+			// min-height: inherit;
+			height: auto;
 		}
 	}
 	[id*="-sub"]{
@@ -166,6 +173,25 @@
 		}
 	}
 
+	.projects-section{}
+
+	// move compo
+	.work-list-grid{
+		.list-text-div{
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+		.list-year{
+			@include txt(80);
+			font-weight: 500;
+			// font-size: $text-font-size-80;
+		}
+		.list-text{
+			width: 70%;
+		}
+	}
+
 	.management-grid{
 		.mana-item{
 
@@ -185,9 +211,10 @@
 			// margin-bottom: 2%;
 		}
 		.mana-row{
-			background-color: #fff;
+			margin: 50px 0;
+			// background-color: #fff;
 			// background-color: $color-gray-04;
-			*{border: 1px dotted #333;}
+			// *{border: 1px dotted #333;}
 			// .mana-item{
 			// 	display: flex;
 			// 	flex-wrap: wrap;
@@ -221,7 +248,7 @@
 					justify-content: flex-start;
 					span{
 						width: 200px;
-						font-size: 24px;
+						@include txt(24);
 						font-weight: 700;
 					}
 				}
@@ -236,8 +263,9 @@
 			}
 		}
 		.mana-col{
+			margin: 50px 0;
 			display: flex;
-			*{border: 1px dotted #d12d2d;}
+			// *{border: 1px dotted #d12d2d;}
 			.mana-item{
 				width: 100%;
 				position: relative;
@@ -250,8 +278,8 @@
 				flex-direction: row-reverse;
 			}
 			.mana-image{
-				position: fixed;
-				z-index: -1;
+				// position: fixed;
+				// z-index: -1;
 				top: 0;
 				left: 0;
 				display: flex;
@@ -260,7 +288,8 @@
 			.mana-link{}
 		}
 		.mana-slice-3-alltxt{
-			background-color: #fff;
+			margin: 50px 0;
+			// background-color: #fff;
 			display: flex;
 			flex-direction: column;
 			.mana-item{
@@ -270,8 +299,10 @@
 				width: 38%;
 			}
 			.mana-label{
-				font-size: 48px;
+				@include txt(48);
 				font-weight: 700;
+				width: initial;
+				height: initial;
 			}
 			.mana-link{
 				width: 100%;
