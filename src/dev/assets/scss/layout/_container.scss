@@ -26,6 +26,7 @@
 			// transition: all 0.5s;
 			// transition-delay: 0.5s;
 			// font-size: clamp(1rem, 3vw, 20rem);
+			
 		}
 		&.fx {
 			// position: fixed;
@@ -41,7 +42,7 @@
 				}
 			}
 			h3{
-				color: #940707;
+				color: #FF9800;
 				position: absolute;
 				bottom: 65%;
 				left: 0;
@@ -89,6 +90,7 @@
 		// &:last-child {
 		// 	background-color: $color-orange-3;
 		// }
+		mix-blend-mode: difference;
 		[class*="-head"],
 		[class*="-body"]{
 			width: 100%;
@@ -106,6 +108,9 @@
 			width: 100%;
 			height: 100%; /* 예시: 고정된 높이 */
 			border-bottom: 2px dashed $color-black;
+
+			background: #ff3434;
+			mix-blend-mode: difference;
 			// transition: all 0.5s ease;
 			// &.reset {
 			// 	min-height: initial;
@@ -151,7 +156,7 @@
 	.links-section {
 		@supports (font-size: clamp(16px, 5vw, 34px)) {
 			a {
-			  font-size: clamp(16px, 8vw, 128px);
+			  font-size: clamp(16px, 8vw, 90px);
 			}
 		}
 		// font-size: 8rem;
@@ -173,9 +178,15 @@
 		}
 	}
 
-	.projects-section{}
+	// .projects-section{}
 
 	// move compo
+	.approach-grid{
+		.appr-text {
+			@include txt(28);
+			margin-bottom: 20px;
+		}
+	}
 	.work-list-grid{
 		.list-text-div{
 			display: flex;
@@ -193,8 +204,9 @@
 	}
 
 	.management-grid{
-		.mana-item{
-
+		.mana-label,
+		.mana-title{
+			background: #ff3434;
 		}
 		img{
 			max-width: 500px;
@@ -270,8 +282,6 @@
 				width: 100%;
 				position: relative;
 			}
-			.mana-label{}
-			.mana-title{}
 			.mana-text{
 				width: 100%;
 				display: inline-flex;
@@ -285,7 +295,7 @@
 				display: flex;
 				flex-direction: column;
 			}
-			.mana-link{}
+			// .mana-link{}
 		}
 		.mana-slice-3-alltxt{
 			margin: 50px 0;
