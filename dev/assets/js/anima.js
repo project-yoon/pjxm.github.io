@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const scrollY = window.scrollY;
 
             sections.forEach((section, index) => {
+				console.log('section : ',section,' index :',index);
                 const rect = section.getBoundingClientRect();
                 const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
 
