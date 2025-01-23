@@ -22,13 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (!isScrollTimelineSupported || !isViewTimelineSupported) {
         document.documentElement.classList.add('no-timeline-support');
+		console.log('IOS!');
         
         const sections = document.querySelectorAll('.sectionz--one, .sectionz--two, .sectionz--three, .sectionz--four');
         const animatableElements = document.querySelectorAll('.cont-box .mng-left, .cont-box .mng-right');
 
         // Scroll-based animations (fallback)
         window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
+			const scrollY = window.scrollY;
+			console.log('scrollY',scrollY);
 
             sections.forEach((section, index) => {
 				console.log('section : ',section,' index :',index);
@@ -36,10 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
 
                 if (isVisible) {
+					console.log('isVisible : ',isVisible);
                     animatableElements.forEach((element) => {
                         const animationProgress = Math.min(Math.max((rect.top / window.innerHeight), 0), 1);
                         element.style.transform = `translateY(${animationProgress * 100}%)`;
                         element.style.opacity = 1 - animationProgress;
+						console.log('forEach END : : :');
                     });
                 }
             });
